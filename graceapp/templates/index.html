@@ -1,0 +1,24 @@
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Index</title>
+    <link
+         href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+         rel="stylesheet"
+      />
+  </head>
+  <body>
+    <h1 class="text-center mt-5 ">BIENVENUE SUR LE FORMULAIRE DE AMENAN</h1>
+    <p class="text-center font-italic">Veuillez renseigner tous informations</p>
+    <div class="container ">
+        <form method="POST">
+            {% csrf_token %}
+           {{ form|crispy}} <br>
+          <button type="submit" class='btn btn-success'>Enregistrer</button>
+        </form>
+    </div>
+   
+  </body>
+</html>
